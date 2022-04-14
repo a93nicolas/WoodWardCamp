@@ -1,0 +1,24 @@
+{
+  "name": "woodwardcamp-main",
+  "version": "1.0.0",
+  "description": "Remodel of wood ward page <h1 align=\"center\">Hi 👋, I'm Nicolas</h1> <h3 align=\"center\">Front end Developer jr.</h3>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a93nicolas/WoodWardCamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a93nicolas/WoodWardCamp/issues"
+  },
+  "homepage": "https://github.com/a93nicolas/WoodWardCamp#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {}
+}

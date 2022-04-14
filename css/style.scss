@@ -1,0 +1,167 @@
+@import "./partials/variables";
+@import "./partials/header";
+@import "./partials/aside";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    width: 100vw;
+    height: 100vh;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url(../img/skatepark2.jpg);
+}
+.__container > *{
+    box-shadow: $box-shadow-col;
+}
+.__container{
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "aside main"
+    "footer footer";
+}
+
+main{
+
+    grid-area: main;
+    @extend %main-interface;
+        h1{
+            background-color: $bg-color-bl;
+            text-align: center;
+            color: $primary-color;
+            font-family: $title-font;
+            font-size: 3vw;
+            border-radius: 2px;
+            box-shadow: $box-shadow-col;
+            margin-bottom: 1vh;
+            }
+        .__texto{
+            font-size: $font-size-res;
+        }
+        .presentacion{
+            background-color: white;
+            box-shadow: $box-shadow-col;
+            border-radius: 5px;
+                .videoInicio{
+                    padding: 2vw;
+                    float: left;
+                    width: 35vw;
+                    height: 40vh;
+                    border-radius: 40px;
+                }
+                .__texto{
+                    h2{
+                        text-decoration: underline;
+                    }
+                    padding: 0.5vw;
+                    font-size: $text-size;
+                }
+        }
+        
+        .__membresias{
+            background-color: white;
+            margin: 1vw;
+            display: inline-block;
+            width: 70vw;
+            height: 15vh;
+            border-radius: 5px;
+            box-shadow: $box-shadow-col;
+             img{
+                 width: 4vw;
+                 float: left;
+                 margin: 1vw 1vw 0vw 1vw;
+             }
+             &__texto{
+                font-size: map-get($display-all-text, $text-size-l);
+                @include posisiones(1vw,0px,0px, 0px,0vw);
+                 padding: 2vw;
+                 line-height: 3.5vh;
+             }
+        }
+        .__galeria{
+            background-color: white;
+            float: left;
+            margin: 2vw 1vw 0vw 2vw;
+            box-shadow: $box-shadow-col;
+            width: 20vw;
+            height: 54vh;
+            border-radius: 5px;
+                &__foto img{
+                    padding: 1vh;
+                    text-align: center;
+                    width: 20vw;
+                    height: 25vh;
+                    border-radius: 10px;
+                }
+                &__texto{
+                    font-size: map-get($display-all-text, $text-size-l);
+                    width: 20vw;
+                    padding: 1vw;
+                        h2{
+                            font-family: 'Wallpoet', cursive;
+                            text-align: center;
+                            margin: 0vh 0vh 2vh;
+                        }
+                }
+
+                &:hover{
+                    background-color: whitesmoke;
+                    cursor: pointer;
+                }
+        }
+        .__formulario{
+                text-align: center;
+                    input,textarea{
+                        margin: 1%;
+                        width: 30vw;
+                        height: 5vh;
+                        border-radius: 5px;
+                    }
+                    textarea{
+                        height: 30vh;
+                    }
+                    .__button{
+                        @include posisiones(0vw,2vh,0px,0px,2vw);
+                        background-color: $bg-color-bl;
+                        color: $primary-color;
+                        width: 15vw;
+                        border-radius: 5px;
+                        font-family: $title-font;
+                        font-size: 1.5vw;
+                        letter-spacing: 5px;
+                            &:hover{
+                                color: $hover-color;
+                                transition: 0.15s;
+                                cursor: pointer;
+                                box-shadow: $box-shadow-col;
+                            }
+                    }   
+        }
+
+}
+
+footer{
+    grid-area: footer;
+    color: $primary-color;
+    background-color: $bg-color-bl;
+    text-align: center;
+}
+
+.navegador__menu_visible{
+    left: 0;
+}
+
+@import "./partials/mediaQuerys";

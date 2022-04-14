@@ -1,0 +1,119 @@
+aside{
+    height: 40vh;
+    padding-top: 5vh;
+    margin-top: 4vh;
+    margin-left: 1vw;
+    grid-area: aside;
+    background-color: $bg-color-wo;
+    color: black;
+    border-radius: 5px;
+        h2{
+            background-color: rgb(34, 37, 37);
+            text-align: center;
+            color: $primary-color;
+            font-family: $title-font;
+            font-size: $title-size;
+            border-radius: 2px;
+            margin-bottom: 1vh;
+        }
+        form{
+            text-align: center;
+                .__icon{
+                    color: #1a2537;
+                    width: 2vw;
+                }
+                input, textarea{
+                    margin: 1%;
+                    width: 15vw;
+                    height: 5vh;
+                    border-radius: 5px;
+                    font-size: $font-size-res;
+                    text-align: center
+                }
+                .__button{
+                    @include posisiones(0vw,2vh,0px,0px,1vw);
+                    background-color: $bg-color-bl;
+                    color: $primary-color;
+                    width: 10vw;
+                    border-radius: 5px;
+                    font-family: $title-font;
+                    font-size: 1.5vw;
+                    letter-spacing: 10px;
+                        &:hover{
+                            color: $hover-color;
+                            transition: 0.15s;
+                            cursor: pointer;
+                            box-shadow: $box-shadow-col;
+                        }
+                }
+                .__texto{
+                    font-size: $font-size-res;
+                }
+                
+        }
+        .__gpsUbicacion iframe{
+            margin-top: 10vh;
+            width: 19vw;
+            height: 30vh;
+            border-radius: 2px;
+            box-shadow: $box-shadow-col;
+        }
+}
+@media (max-width: 768px){
+    aside{
+        height: 48vh;
+        grid-area: aside;
+        background-color: $bg-color-wo;
+        border-radius: 2px;
+            h2{
+                background-color: rgb(34, 37, 37);
+                text-align: center;
+                color: $primary-color;
+                font-family: $title-font;
+                border-radius: 2px;
+                margin-bottom: 1vh;
+            }
+            form{
+                text-align: center;
+                    .__icon{
+                        color: #1a2537;
+                        width: 5vw;
+                    }
+                    input, textarea{
+                        font-size: $font-size-res;
+                        margin: 1%;
+                        width: 60vw;
+                        height: 7vh;
+                        border-radius: 5px;
+                    }
+                    .__button{
+                        margin-left: 2VW;
+                        margin-top: 2vh;
+                        background-color: $bg-color-bl;
+                        color: $primary-color;
+                        width: 50vw;
+                        height: auto;
+                        border-radius: 5px;
+                        font-family: $title-font;
+                        font-size: $font-size-res;
+                        letter-spacing: 10px;
+                            &:hover{
+                                color: $hover-color;
+                                transition: 0.5s;
+                                cursor: pointer;
+                            }
+                    }
+                    .__texto{
+                        font-size: $font-size-res;
+                    }
+                    
+            }
+            .__gpsUbicacion iframe{
+                display: none;
+                margin-top: 10vh;
+                width: 19vw;
+                height: 30vh;
+                border-radius: 2px;
+            }
+    }
+}

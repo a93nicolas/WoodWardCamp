@@ -1,0 +1,33 @@
+$bg-color-bl: rgb(34,34,34);
+$bg-color-wo: rgba(255,255,255,0.7);
+$title-font:'Big Shoulders Stencil Display', cursive;
+$primary-color: white;
+$hover-color: rgb(158, 156, 30);
+$title-size: 3em;
+$text-size: 1.5em;
+$text-size-l: 1em;
+$title-size-res: 3em;
+$font-size-res: 1.5em;
+$box-shadow-col: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+
+
+$display-all-text: (
+    color: black,
+    $text-size-l: $font-size-res,
+);
+
+%main-interface {
+    margin: 4vh 1vw;
+    padding: 3%;
+    background-color: $bg-color-wo;
+    border-radius: 5px;
+}
+
+@mixin posisiones($padding,$margin-top,$margin-right,$margin-bottom,$margin-left) {
+    padding: $padding;
+    margin-top: $margin-top;
+    margin-right: $margin-right;
+    margin-bottom: $margin-bottom;
+    margin-left: $margin-left;
+
+}

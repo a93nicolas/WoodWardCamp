@@ -1,0 +1,661 @@
+main {
+  margin: 4vh 1vw;
+  padding: 3%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+  background-color: #222222;
+  position: fixed;
+  width: 100vw;
+}
+
+header .navegador {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .navegador__logo {
+  width: 20vw;
+  height: 10vh;
+}
+
+header .navegador__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1vw;
+}
+
+header .navegador__item {
+  font-size: 6vh;
+  line-height: 10vh;
+  margin: 0 1vw;
+  text-transform: uppercase;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+header .navegador__link {
+  padding: 0.7vw 0.7vh;
+  color: white;
+  font-family: "Big Shoulders Stencil Display", cursive;
+}
+
+header .navegador__link:hover {
+  background-color: #01192b;
+  border-radius: 5px;
+  color: #9e9c1e;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .navegador__hamburguesa {
+  float: center;
+  background-color: #222222;
+  color: white;
+  border: none;
+  font-size: 7vh;
+  margin-right: 7vw;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: header;
+    background-color: #222222;
+    position: fixed;
+    width: 100vw;
+  }
+  header .navegador {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .navegador__logo {
+    height: 10vh;
+    width: 50vw;
+  }
+  header .navegador__menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 5vw;
+    background-color: #222525;
+    position: fixed;
+    top: 10vh;
+    width: 100%;
+    left: 100%;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    height: calc(100% - 10vh);
+    overflow-y: auto;
+  }
+  header .navegador__item {
+    font-size: 7vh;
+    line-height: 12vh;
+    margin: 4vh 1vw;
+    text-transform: uppercase;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  header .navegador__link {
+    padding: 0.7vw 0.7vh;
+    color: white;
+    font-family: "Big Shoulders Stencil Display", cursive;
+  }
+  header .navegador__link:hover {
+    background-color: #01192b;
+    border-radius: 5px;
+    color: #9e9c1e;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  header .navegador__hamburguesa {
+    float: center;
+    background-color: #222222;
+    color: white;
+    border: none;
+    font-size: 7vh;
+    margin-right: 7vw;
+    display: block;
+    cursor: pointer;
+  }
+  header .navegador__hamburguesa:hover {
+    background-color: #01192b;
+    border-radius: 5px;
+    color: #9e9c1e;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  header .navegador__menu_visible {
+    left: 0;
+  }
+}
+
+aside {
+  height: 40vh;
+  padding-top: 5vh;
+  margin-top: 4vh;
+  margin-left: 1vw;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: aside;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  border-radius: 5px;
+}
+
+aside h2 {
+  background-color: #222525;
+  text-align: center;
+  color: white;
+  font-family: "Big Shoulders Stencil Display", cursive;
+  font-size: 3em;
+  border-radius: 2px;
+  margin-bottom: 1vh;
+}
+
+aside form {
+  text-align: center;
+}
+
+aside form .__icon {
+  color: #1a2537;
+  width: 2vw;
+}
+
+aside form input, aside form textarea {
+  margin: 1%;
+  width: 15vw;
+  height: 5vh;
+  border-radius: 5px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+aside form .__button {
+  padding: 0vw;
+  margin-top: 2vh;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 1vw;
+  background-color: #222222;
+  color: white;
+  width: 10vw;
+  border-radius: 5px;
+  font-family: "Big Shoulders Stencil Display", cursive;
+  font-size: 1.5vw;
+  letter-spacing: 10px;
+}
+
+aside form .__button:hover {
+  color: #9e9c1e;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  cursor: pointer;
+  -webkit-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+aside form .__texto {
+  font-size: 1.5em;
+}
+
+aside .__gpsUbicacion iframe {
+  margin-top: 10vh;
+  width: 19vw;
+  height: 30vh;
+  border-radius: 2px;
+  -webkit-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 768px) {
+  aside {
+    height: 48vh;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: aside;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 2px;
+  }
+  aside h2 {
+    background-color: #222525;
+    text-align: center;
+    color: white;
+    font-family: "Big Shoulders Stencil Display", cursive;
+    border-radius: 2px;
+    margin-bottom: 1vh;
+  }
+  aside form {
+    text-align: center;
+  }
+  aside form .__icon {
+    color: #1a2537;
+    width: 5vw;
+  }
+  aside form input, aside form textarea {
+    font-size: 1.5em;
+    margin: 1%;
+    width: 60vw;
+    height: 7vh;
+    border-radius: 5px;
+  }
+  aside form .__button {
+    margin-left: 2VW;
+    margin-top: 2vh;
+    background-color: #222222;
+    color: white;
+    width: 50vw;
+    height: auto;
+    border-radius: 5px;
+    font-family: "Big Shoulders Stencil Display", cursive;
+    font-size: 1.5em;
+    letter-spacing: 10px;
+  }
+  aside form .__button:hover {
+    color: #9e9c1e;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  aside form .__texto {
+    font-size: 1.5em;
+  }
+  aside .__gpsUbicacion iframe {
+    display: none;
+    margin-top: 10vh;
+    width: 19vw;
+    height: 30vh;
+    border-radius: 2px;
+  }
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-image: url(../img/skatepark2.jpg);
+}
+
+.__container > * {
+  -webkit-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+.__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20vw 80vw;
+      grid-template-columns: 20vw 80vw;
+  -ms-grid-rows: 10vh 80vh 10vh;
+      grid-template-rows: 10vh 80vh 10vh;
+      grid-template-areas: "header header" "aside main" "aside main" "footer footer";
+}
+
+main {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: main;
+}
+
+main h1 {
+  background-color: #222222;
+  text-align: center;
+  color: white;
+  font-family: "Big Shoulders Stencil Display", cursive;
+  font-size: 3vw;
+  border-radius: 2px;
+  -webkit-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  margin-bottom: 1vh;
+}
+
+main .__texto {
+  font-size: 1.5em;
+}
+
+main .presentacion {
+  background-color: white;
+  -webkit-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+}
+
+main .presentacion .videoInicio {
+  padding: 2vw;
+  float: left;
+  width: 35vw;
+  height: 40vh;
+  border-radius: 40px;
+}
+
+main .presentacion .__texto {
+  padding: 0.5vw;
+  font-size: 1.5em;
+}
+
+main .presentacion .__texto h2 {
+  text-decoration: underline;
+}
+
+main .__membresias {
+  background-color: white;
+  margin: 1vw;
+  display: inline-block;
+  width: 70vw;
+  height: 15vh;
+  border-radius: 5px;
+  -webkit-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+main .__membresias img {
+  width: 4vw;
+  float: left;
+  margin: 1vw 1vw 0vw 1vw;
+}
+
+main .__membresias__texto {
+  font-size: 1.5em;
+  padding: 1vw;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0vw;
+  padding: 2vw;
+  line-height: 3.5vh;
+}
+
+main .__galeria {
+  background-color: white;
+  float: left;
+  margin: 2vw 1vw 0vw 2vw;
+  -webkit-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  width: 20vw;
+  height: 54vh;
+  border-radius: 5px;
+}
+
+main .__galeria__foto img {
+  padding: 1vh;
+  text-align: center;
+  width: 20vw;
+  height: 25vh;
+  border-radius: 10px;
+}
+
+main .__galeria__texto {
+  font-size: 1.5em;
+  width: 20vw;
+  padding: 1vw;
+}
+
+main .__galeria__texto h2 {
+  font-family: 'Wallpoet', cursive;
+  text-align: center;
+  margin: 0vh 0vh 2vh;
+}
+
+main .__galeria:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+main .__formulario {
+  text-align: center;
+}
+
+main .__formulario input, main .__formulario textarea {
+  margin: 1%;
+  width: 30vw;
+  height: 5vh;
+  border-radius: 5px;
+}
+
+main .__formulario textarea {
+  height: 30vh;
+}
+
+main .__formulario .__button {
+  padding: 0vw;
+  margin-top: 2vh;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 2vw;
+  background-color: #222222;
+  color: white;
+  width: 15vw;
+  border-radius: 5px;
+  font-family: "Big Shoulders Stencil Display", cursive;
+  font-size: 1.5vw;
+  letter-spacing: 5px;
+}
+
+main .__formulario .__button:hover {
+  color: #9e9c1e;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  cursor: pointer;
+  -webkit-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+  color: white;
+  background-color: #222222;
+  text-align: center;
+}
+
+.navegador__menu_visible {
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  html {
+    width: 100vw;
+    height: 100vh;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url(../img/skatepark2.jpg);
+  }
+  .__container > * {
+    -webkit-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  }
+  .__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100vw;
+        grid-template-columns: 100vw;
+    -ms-grid-rows: 10vh;
+        grid-template-rows: 10vh;
+        grid-template-areas: "header" "aside" "main" "footer";
+  }
+  main {
+    padding: 5%;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: main;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 2px;
+  }
+  main h1 {
+    background-color: #222222;
+    color: white;
+    font-family: "Big Shoulders Stencil Display", cursive;
+    font-size: 3em;
+    border-radius: 2px;
+    margin-bottom: 1vh;
+  }
+  main .presentacion {
+    width: 88vw;
+    height: auto;
+    background-color: white;
+  }
+  main .presentacion .videoInicio {
+    display: none;
+    width: 35vw;
+    height: 42vh;
+    margin-right: 1vw;
+  }
+  main .presentacion .__texto {
+    font-size: 1.5em;
+  }
+  main .__membresias {
+    background-color: white;
+    margin: 1vw;
+    width: 85vw;
+    height: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  }
+  main .__membresias img {
+    width: 18%;
+    float: left;
+    margin: 1vw 2vw 1vw 1vw;
+  }
+  main .__membresias__texto {
+    font-size: 1.5em;
+    font-size: 1.5em;
+    padding: 2vw;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 5vw;
+    padding: 2vw;
+    margin-left: 5vw;
+  }
+  main .__membresias__texto h2 {
+    margin-bottom: 2vh;
+  }
+  main .__galeria {
+    background-color: white;
+    margin: 2vw 1vw 0vw 2vw;
+    -webkit-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    width: 84vw;
+    height: auto;
+    border-radius: 5px;
+  }
+  main .__galeria__foto img {
+    padding: 1vh;
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+  }
+  main .__galeria__texto {
+    font-size: 1.5em;
+    width: 83vw;
+    padding: 1vw;
+  }
+  main .__galeria__texto h2 {
+    font-family: 'Wallpoet', cursive;
+    text-align: center;
+    margin: 0vh 0vh 2vh;
+  }
+  main .__galeria:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+  }
+  main .__formulario {
+    text-align: center;
+  }
+  main .__formulario .__icon {
+    color: #1a2537;
+    width: 5vw;
+  }
+  main .__formulario input, main .__formulario textarea {
+    font-size: 1.5em;
+    margin: 1%;
+    width: 60vw;
+    height: 7vh;
+    border-radius: 5px;
+  }
+  main .__formulario .textarea__contacto {
+    font-size: 1.5em;
+    margin: 1%;
+    width: 70vw;
+    height: 30vh;
+    border-radius: 5px;
+  }
+  main .__formulario .__button {
+    margin-left: 2VW;
+    margin-top: 2vh;
+    background-color: #222222;
+    color: white;
+    width: 50vw;
+    height: auto;
+    border-radius: 5px;
+    font-family: "Big Shoulders Stencil Display", cursive;
+    font-size: 1.5em;
+    letter-spacing: 10px;
+  }
+  main .__formulario .__button:hover {
+    color: #9e9c1e;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  main .__formulario .__texto {
+    font-size: 1.5em;
+  }
+  footer {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: footer;
+    color: white;
+    background-color: #222222;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

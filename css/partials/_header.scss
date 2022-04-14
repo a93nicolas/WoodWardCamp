@@ -1,0 +1,113 @@
+header{
+    grid-area: header;
+    background-color: $bg-color-bl;
+    position: fixed;
+    width: 100vw;
+        .navegador{
+            display: flex ;
+            justify-content: space-between;
+                &__logo{
+                    width: 20vw;
+                    height: 10vh;
+                }
+                &__menu{
+                    display: flex;
+                    margin-right: 1vw;
+                }
+                &__item{
+                    font-size: 6vh;
+                    line-height: 10vh;
+                    margin: 0 1vw;
+                    text-transform: uppercase;
+                    width: max-content ;
+                }
+                &__link{
+                    padding: 0.7vw 0.7vh ;
+                    color: $primary-color;
+                    font-family:$title-font;                   
+                }
+                &__link:hover{
+                    background-color: #01192b;
+                    border-radius: 5px;
+                    color: $hover-color;
+                    transition: 0.3s;
+                }
+                &__hamburguesa{
+                    float: center;
+                    background-color: $bg-color-bl;
+                    color: $primary-color;
+                    border: none;
+                    font-size: 7vh;
+                    margin-right: 7vw;
+                    display: none;
+                }
+        }
+}
+
+@media (max-width: 768px){
+    header{
+        grid-area: header;
+        background-color: $bg-color-bl;
+        position: fixed;
+        width: 100vw;
+            .navegador{
+                display: flex ;
+                justify-content: space-between;
+                    &__logo{
+                        height: 10vh;
+                        width: 50vw;
+                    }
+                    &__menu{
+                        flex-direction: column;
+                        align-items: center;
+                        margin-right: 5vw;
+                        background-color: rgb(34, 37, 37);
+                        position: fixed;
+                        top: 10vh;
+                        width: 100%;
+                        left: 100%;
+                        transition: 0.3s;
+                        height: calc(100% - 10vh);
+                        overflow-y: auto;
+                    }
+                    &__item{
+                        font-size: 7vh;
+                        line-height: 12vh;
+                        margin: 4vh 1vw;
+                        text-transform: uppercase;
+                        width: max-content;
+                    }
+                    &__link{
+                        padding: 0.7vw 0.7vh ;
+                        color: $primary-color;
+                        font-family:$title-font;                   
+                    }
+                    &__link:hover{
+                        background-color: #01192b;
+                        border-radius: 5px;
+                        color: $hover-color;
+                        transition: 0.5s;
+                    }
+                    &__hamburguesa{
+                        float: center;
+                        background-color: $bg-color-bl;
+                        color: $primary-color;
+                        border: none;
+                        font-size: 7vh;
+                        margin-right: 7vw;
+                        display: block;
+                        cursor: pointer;
+                            &:hover{
+                                background-color: #01192b;
+                                border-radius: 5px;
+                                color: $hover-color;
+                                transition: 0.5s;
+                            }
+                    }
+            }
+            
+        .navegador__menu_visible{
+            left: 0;
+        }
+    }
+}
