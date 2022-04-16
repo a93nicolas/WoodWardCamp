@@ -10,14 +10,14 @@
     list-style: none;
 }
 html{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
-    min-height: 100vh;
-    min-width: 100vw;
+    min-height: 100%;
+    min-width: 100%;
     background-image: url(../img/skatepark2.jpg);
 }
 .__container > *{
@@ -25,8 +25,8 @@ body{
 }
 .__container{
     display: grid;
-    grid-template-columns: 20vw 80vw;
-    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 10% 90% 10%;
     grid-template-areas: 
     "header header"
     "aside main"
@@ -46,7 +46,7 @@ main{
             font-size: 3vw;
             border-radius: 2px;
             box-shadow: $box-shadow-col;
-            margin-bottom: 1vh;
+            margin-bottom: 1%;
             }
         .__texto{
             font-size: $font-size-res;
@@ -56,7 +56,7 @@ main{
             box-shadow: $box-shadow-col;
             border-radius: 5px;
                 .videoInicio{
-                    padding: 2vw;
+                    padding: 2%;
                     float: left;
                     width: 35vw;
                     height: 40vh;
@@ -66,29 +66,29 @@ main{
                     h2{
                         text-decoration: underline;
                     }
-                    padding: 0.5vw;
+                    padding: 0.5%;
                     font-size: $text-size;
                 }
         }
         
         .__membresias{
             background-color: white;
-            margin: 1vw;
+            margin: 1%;
             display: inline-block;
-            width: 70vw;
-            height: 15vh;
+            width: 100%;
+            height: 20%;
             border-radius: 5px;
             box-shadow: $box-shadow-col;
              img{
-                 width: 4vw;
+                 width: 6%;
                  float: left;
-                 margin: 1vw 1vw 0vw 1vw;
+                 margin: 1% 1% 0% 1%;
              }
              &__texto{
                 font-size: map-get($display-all-text, $text-size-l);
-                @include posisiones(1vw,0px,0px, 0px,0vw);
-                 padding: 2vw;
-                 line-height: 3.5vh;
+                @include posisiones(1%,0px,0px, 0px,0vw);
+                 padding: 2%;
+                 line-height: 100%;
              }
         }
         .__galeria{
@@ -96,24 +96,25 @@ main{
             float: left;
             margin: 2vw 1vw 0vw 2vw;
             box-shadow: $box-shadow-col;
-            width: 20vw;
-            height: 54vh;
+            width: 28%;
+            height: 70%;
             border-radius: 5px;
                 &__foto img{
                     padding: 1vh;
                     text-align: center;
-                    width: 20vw;
+                    width: 100%;
                     height: 25vh;
                     border-radius: 10px;
                 }
                 &__texto{
                     font-size: map-get($display-all-text, $text-size-l);
-                    width: 20vw;
-                    padding: 1vw;
+                    width: 100%;
+                    padding: 5%;
                         h2{
+                            font-size: $font-size-res;
                             font-family: 'Wallpoet', cursive;
                             text-align: center;
-                            margin: 0vh 0vh 2vh;
+                            margin: 0vh 0vh 5%;
                         }
                 }
 
@@ -126,7 +127,7 @@ main{
                 text-align: center;
                     input,textarea{
                         margin: 1%;
-                        width: 30vw;
+                        width: 35%;
                         height: 5vh;
                         border-radius: 5px;
                     }
@@ -137,10 +138,10 @@ main{
                         @include posisiones(0vw,2vh,0px,0px,2vw);
                         background-color: $bg-color-bl;
                         color: $primary-color;
-                        width: 15vw;
+                        width: 25%;
                         border-radius: 5px;
                         font-family: $title-font;
-                        font-size: 1.5vw;
+                        font-size: $text-size;
                         letter-spacing: 5px;
                             &:hover{
                                 color: $hover-color;

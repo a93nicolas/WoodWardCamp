@@ -4,10 +4,10 @@ $title-font:'Big Shoulders Stencil Display', cursive;
 $primary-color: white;
 $hover-color: rgb(158, 156, 30);
 $title-size: 3em;
-$text-size: 1.5em;
+$text-size: 1.3em;
 $text-size-l: 1em;
 $title-size-res: 3em;
-$font-size-res: 1.5em;
+$font-size-res: 1.3em;
 $box-shadow-col: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 
 
@@ -17,7 +17,8 @@ $display-all-text: (
 );
 
 %main-interface {
-    margin: 4vh 1vw;
+    background-size: auto;
+    margin: 4% 1%;
     padding: 3%;
     background-color: $bg-color-wo;
     border-radius: 5px;
