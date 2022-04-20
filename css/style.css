@@ -156,9 +156,9 @@ header .navegador__hamburguesa {
 }
 
 aside {
-  height: 45%;
+  height: 50%;
   padding-top: 10%;
-  margin-top: 30%;
+  margin-top: 12%;
   margin-left: 1%;
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
@@ -227,8 +227,10 @@ aside form .__texto {
 
 aside .__gpsUbicacion iframe {
   margin-top: 20%;
-  width: 100%;
-  height: 30vh;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  width: 80%;
+  height: 25vh;
   border-radius: 5px;
   -webkit-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
           box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
