@@ -130,8 +130,8 @@ header .navegador__hamburguesa {
     background-color: #01192b;
     border-radius: 5px;
     color: #9e9c1e;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: 0.15s;
+    transition: 0.15s;
   }
   header .navegador__hamburguesa {
     float: center;
@@ -147,8 +147,8 @@ header .navegador__hamburguesa {
     background-color: #01192b;
     border-radius: 5px;
     color: #9e9c1e;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: 0.15s;
+    transition: 0.15s;
   }
   header .navegador__menu_visible {
     left: 0;
@@ -284,8 +284,8 @@ aside .__gpsUbicacion iframe {
   }
   aside form .__button:hover {
     color: #9e9c1e;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: 0.15s;
+    transition: 0.15s;
     cursor: pointer;
   }
   aside form .__texto {
